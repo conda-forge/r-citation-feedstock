@@ -1,4 +1,4 @@
-{% set version = '0.8.2' %}
+{% set version = "0.12.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/citation_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/citation/citation_{{ version }}.tar.gz
-  sha256: 6f90fab48f16f404b338271948add77bf960d312d4e54b2ed55789a35cd7d068
+  sha256: 21d6c817f39248b1b6b695c8f1b91dd252d2a52683b2b61c6186c30b7311778a
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -43,10 +43,7 @@ test:
 about:
   home: https://github.com/pik-piam/citation
   license: BSD-2-Clause
-  summary: A collection of functions to extract citation information from 'R' packages and to
-    deal with files in 'citation file format' (<https://citation-file-format.github.io/>),
-    extending the functionality already provided by the citation() function in the 'utils'
-    package.
+  summary: A collection of functions to extract citation information from 'R' packages and to deal with files in 'citation file format' (<https://citation-file-format.github.io/>), extending the functionality already provided by the citation() function in the 'utils' package.
   license_family: BSD
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause'
